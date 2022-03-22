@@ -1,0 +1,42 @@
+* {
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+
+.title {
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    margin: 10vh 0;
+}
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;  
+    margin: 15vh 0 0 22vh;
+}
+
+.recipe__item {
+    background: orangered;
+    overflow: hidden;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.recipe__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.recipe__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.recipe__img:hover,
+.recipe__item:focus .recipe__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
